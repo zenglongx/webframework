@@ -27,8 +27,8 @@
                         </div>
                     </li>
                     <li class="nav-heading ">主导航</li>
-                    <li class="active" id="home">
-                        <a title="首页"  href="javascript:void(0);" onclick="leftMenu.toggleSelect(this)">
+                    <li id="home">
+                        <a title="首页"  href="javascript:void(0);" onclick="leftMenu.toggleSelect(this,'/home/welcome')">
                             <em class="icon-home"></em>
                             <span>首页</span>
                         </a>
@@ -41,7 +41,7 @@
                         <ul class="nav sidebar-subnav collapse" id="favorites">
                             <li class="sidebar-subnav-header">一级菜单</li>
                             <li id="newFavortes" class=" ">
-                                <a title="二级菜单" href="javascript:void(0);" onclick="leftMenu.toggleSelect(this)">
+                                <a title="二级菜单" href="javascript:void(0);" onclick="leftMenu.toggleSelect(this,'/home/welcome')">
                                     <span>二级菜单</span>
                                 </a>
                             </li>
@@ -55,12 +55,25 @@
             var leftMenu = ((function(){
                 return {
                     
-                    toggleSelect : function (el){
+                    toggleSelect : function (el,path){
                         
                         $(".sidebar .nav li.active").removeClass("active");
                         
                         el.parentNode.setAttribute("class","active");
+
+                        this.gotoPath(path);
+
+                    },
+                    gotoPath:function(path){
+                    	$.get(path).done(function(_html){
+                        	$("#content").html(_html);
+                        }).fail(function(){
+                            $("#content").html(path);
+                        });
                     }
+                    
+
+
                 };
             })());
         </script>
