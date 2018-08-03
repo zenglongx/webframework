@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <aside class="offsidebar" th:fragment="sidebar" >
+        <h3 class="text-center">设置</h3>
+        <div class="p-lg text-center">
+            <a class="btn btn-default btn-block" data-target="#modal-ChangePass" data-toggle="modal" href="#">
+                <strong>修改密码</strong>
+            </a>
+        </div>
+        <div class="p-lg text-center">
+            <a class="btn btn-danger btn-block" href="/login">
+                <strong>注销</strong>
+            </a>
+        </div>
+    </aside>
+</body>
+</html>

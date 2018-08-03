@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <aside class="aside" th:fragment="left">
+        <div class="aside-inner">
+            <nav class="sidebar" data-sidebar-anyclick-close="">
+                <ul class="nav">
+                    <li class="has-user-block">
+                        <div>
+                            <div class="item user-block">
+                                <div class="user-block-picture">
+                                    <div class="user-block-status">
+                                        <a href="javascript:void(0);">
+                                            <img alt="" class="img-thumbnail img-circle"  src="" id="leftProfilePicture"/></a>
+                                        <div class="circle circle-success circle-lg"></div>
+                                    </div>
+                                </div>
+                                <div class="user-block-info">
+                                    <div class="user-block-name" th:text="'欢迎  XXX'" id="leftUserName">欢迎 欢迎</div>
+                                    <div class="user-block-role" th:text="简介" id="leftIntroduction">暂无简介</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-heading ">主导航</li>
+                    <li class="active" id="home">
+                        <a title="首页"  href="javascript:void(0);" onclick="leftMenu.toggleSelect(this)">
+                            <em class="icon-home"></em>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li class="" >
+                        <a data-toggle="collapse" title="一级菜单" href="#favorites">
+                            <em class="icon-folder"></em>
+                            <span>一级菜单</span>
+                        </a>
+                        <ul class="nav sidebar-subnav collapse" id="favorites">
+                            <li class="sidebar-subnav-header">一级菜单</li>
+                            <li id="newFavortes" class=" ">
+                                <a title="二级菜单" href="javascript:void(0);" onclick="leftMenu.toggleSelect(this)">
+                                    <span>二级菜单</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+            // 菜单选中高亮
+            var leftMenu = ((function(){
+                return {
+                    
+                    toggleSelect : function (el){
+                        
+                        $(".sidebar .nav li.active").removeClass("active");
+                        
+                        el.parentNode.setAttribute("class","active");
+                    }
+                };
+            })());
+        </script>
+    </aside>
+</body>
+</html>
