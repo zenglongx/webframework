@@ -5,7 +5,17 @@
 
 <body>
     <section layout:fragment="content">
-        <p>Content</p>
+        <p>Content </p>
+
+        <div th:unless="${subject.authenticated}">
+            <a th:href="@{/login}" class="btn btn-primary">Login</a>
+        </div>
+        <div th:if="${subject.authenticated}">
+            <h4 th:text="'Principal: ' + ${subject.principal}"></h4>
+            <form id="logoutForm" th:action="@{/logout}" method="post">
+                <input type="submit" class="btn btn-danger" value="Logout"/>
+            </form>
+        </div>
     </section>
 </body>
 
