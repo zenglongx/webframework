@@ -26,9 +26,9 @@
         <module>common</module>
         <module>business-inter</module>
         <module>business-impl</module>
-        <module>business-rpc</module>
+        <module>provider-service</module>
         <module>application</module>
-        <module>rest-api</module>
+        <module>consumer-rest</module>
         <module>static-resource</module>
     </modules>
 

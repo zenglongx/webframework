@@ -19,7 +19,8 @@ public class UserController {
 
     @Reference(version = "${user.service.version}",
             application = "${dubbo.application.id}"/*,
-            url = "dubbo://localhost:12345"*/)
+            url = "dubbo://192.168.72.132:8080/com.xx.webframework.service.UserService"*/)
+//            url = "webservice://192.168.72.132:8080/com.xx.webframework.service.UserService")
     UserService rpcUserService;
 
     @RequestMapping(method = RequestMethod.GET,value = "/user/list")

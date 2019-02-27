@@ -7,7 +7,7 @@ import com.xx.webframework.service.impl.UserServiceImpl;
 @Service(
         version = "1.0.0",
         application = "${dubbo.application.id}",
-        protocol = "${dubbo.protocol.id}",
+        protocol = {"dubboId","webserviceId"},
         registry = "${dubbo.registry.id}"
 )
 public class RpcUserService extends UserServiceImpl implements UserService {

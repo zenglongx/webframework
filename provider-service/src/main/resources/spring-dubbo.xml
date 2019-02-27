@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo">
+
+    <!--<dubbo:protocol id="webserviceId" name="webservice" port="8080" server="jetty" />-->
+    <!--<dubbo:protocol id="dubboId" name="dubbo" port="8081" />-->
+
+    <!--<dubbo:service interface="com.xx.webframework.service.UserService" protocol="webserviceId,dubboId" ref="rpcUserService"/>-->
+</beans>
