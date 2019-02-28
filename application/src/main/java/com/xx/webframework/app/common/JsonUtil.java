@@ -1,4 +1,4 @@
-package com.xx.webframework.common;
+package com.xx.webframework.app.common;
 
 import com.google.gson.Gson;
 

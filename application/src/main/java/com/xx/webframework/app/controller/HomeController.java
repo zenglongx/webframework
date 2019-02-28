@@ -1,4 +1,4 @@
-package com.xx.webframework.controller;
+package com.xx.webframework.app.controller;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.PrincipalCollection;

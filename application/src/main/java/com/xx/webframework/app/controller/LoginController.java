@@ -1,7 +1,7 @@
-package com.xx.webframework.controller;
+package com.xx.webframework.app.controller;
 
-import com.xx.webframework.common.ResponseResult;
-import com.xx.webframework.common.JsonUtil;
+import com.xx.webframework.app.common.ResponseResult;
+import com.xx.webframework.app.common.JsonUtil;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 @RequestMapping("/login")

@@ -1,4 +1,4 @@
-package com.xx.webframework.common;
+package com.xx.webframework.app.common;
 
 import lombok.Getter;
 import lombok.Setter;

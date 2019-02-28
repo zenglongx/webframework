@@ -1,4 +1,4 @@
-package com.xx.webframework;
+package com.xx.webframework.restapi;
 
 import org.springframework.context.annotation.Configuration;
 

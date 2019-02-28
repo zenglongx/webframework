@@ -8,8 +8,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Stream;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -19,7 +19,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> findAll() {
-//        return userRepository.findAll(PageRequest.of(0,10)).getContent();
-        return Arrays.asList(new User());
+        List<User> list = new ArrayList<>((int)userRepository.count());
+        userRepository.findAll().forEach(u -> list.add(u));
+        System.out.println(userRepository.sayHello());
+        return list;
     }
 }
